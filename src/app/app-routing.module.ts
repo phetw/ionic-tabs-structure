@@ -2,7 +2,12 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { Tabs } from './tabs/tabs';
 
-const tabRoutes: Routes = [
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/tabs/tab1',
+    pathMatch: 'full'
+  },
   {
     path: 'tabs',
     component: Tabs,
@@ -40,16 +45,11 @@ const tabRoutes: Routes = [
         pathMatch: 'full'
       }
     ]
-  },
-  {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
   }
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(tabRoutes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
