@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &__lang-picker{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75%;
+        cursor: pointer;
+        padding: 0 0.75rem;
+    }
+}
