@@ -5,13 +5,14 @@ import { Tabs } from './tabs/tabs';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'tabs/welcome',
     pathMatch: 'full'
   },
   {
     path: 'tabs',
     component: Tabs,
     children: [
+      { path: 'welcome', loadChildren: './pages/welcome/welcome.module#WelcomePageModule' },
       {
         path: 'tab1',
         children: [
@@ -41,7 +42,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/welcome',
         pathMatch: 'full'
       }
     ]
