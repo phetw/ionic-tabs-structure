@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { TabsComponent } from './tabs/tabs.component';
+import { Tabs } from './tabs/tabs';
 
 const tabRoutes: Routes = [
   {
     path: 'tabs',
-    component: TabsComponent,
+    component: Tabs,
     children: [
       {
         path: 'tab1',
