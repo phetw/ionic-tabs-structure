@@ -1,1 +1,1 @@
-## ionic 4 poc project
+## ionic v4 tabs project structure
