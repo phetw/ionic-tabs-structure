@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { WelcomePage } from './welcome.page';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TranslateModule.forChild()
   ],
   declarations: [WelcomePage, HeaderComponent]
 })

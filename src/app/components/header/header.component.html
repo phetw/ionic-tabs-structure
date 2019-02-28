@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <section class="header">
-      <ion-title>App name</ion-title>
+      <ion-title translate>
+        {{ 'APPNAME' | translate }}
+      </ion-title>
       <div class="header__lang-picker" (click)="switchLanguage()">TH | ENG</div>
     </section>
   </ion-toolbar>
